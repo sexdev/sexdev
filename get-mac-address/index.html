@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>获取设备的MAC地址 - FixIt</title><meta name="author" content="SexDev: https://sexdev.github.io">
+<meta name="description" content="如何获取华为交换机每个端口所接设备的MAC地址" />
+<meta name="keywords" content="网络运维" /><meta itemprop="name" content="获取设备的MAC地址">
+<meta itemprop="description" content="如何获取华为交换机每个端口所接设备的MAC地址"><meta itemprop="datePublished" content="2022-02-03T19:00:40+08:00" />
+<meta itemprop="dateModified" content="2022-02-03T19:40:40+08:00" />
+<meta itemprop="wordCount" content="78"><meta itemprop="image" content="https://sexdev.github.io/get-mac-address/featured-image.jpg">
+<meta itemprop="keywords" content="网络运维," /><meta property="og:title" content="获取设备的MAC地址" />
+<meta property="og:description" content="如何获取华为交换机每个端口所接设备的MAC地址" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sexdev.github.io/get-mac-address/" /><meta property="og:image" content="https://sexdev.github.io/get-mac-address/featured-image.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-03T19:00:40+08:00" />
+<meta property="article:modified_time" content="2022-02-03T19:40:40+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://sexdev.github.io/get-mac-address/featured-image.jpg"/>
+<meta name="twitter:title" content="获取设备的MAC地址"/>
+<meta name="twitter:description" content="如何获取华为交换机每个端口所接设备的MAC地址"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#252627"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://sexdev.github.io/get-mac-address/" /><link rel="prev" href="https://sexdev.github.io/theme-documentation-extended-shortcodes/" /><link rel="next" href="https://sexdev.github.io/sexdev-hugo-site/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "获取设备的MAC地址",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/sexdev.github.io\/get-mac-address\/"
+    },"image": [{
+              "@type": "ImageObject",
+              "url": "https:\/\/sexdev.github.io\/get-mac-address\/featured-image.jpg",
+              "width":  2363 ,
+              "height":  1269 
+            }],"genre": "posts","keywords": "网络运维","wordcount":  78 ,
+    "url": "https:\/\/sexdev.github.io\/get-mac-address\/","datePublished": "2022-02-03T19:00:40+08:00","dateModified": "2022-02-03T19:40:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+      "@type": "Organization",
+      "name": "Lruihao","logo": {
+          "@type": "ImageObject",
+          "url": "https:\/\/sexdev.github.io\/images\/avatar.png",
+          "width":  528 ,
+          "height":  560 
+        }},"author": {
+        "@type": "Person",
+        "name": "sexdev"
+      },"description": "如何获取华为交换机每个端口所接设备的MAC地址"
+  }
+  </script></head>
+  <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="FixIt"><span class="header-title-pre"><i class="fa-stack fa-xs logo-icon"><i class="fas fa-ban fa-stack-2x"></i><i class="fas fa-bug fa-stack-1x"></i></i></span><span class="header-title-text">FixIt</span></a><span class="header-subtitle"></span></div>
+    <div class="menu">
+      <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/friends/" title="友情链接"> 友链 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/Lruihao/FixIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+            <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/get-mac-address/">English</option><option value="/get-mac-address/" selected>简体中文</option></select>
+          </a><span class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</header><header class="mobile" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="FixIt"><span class="header-title-pre"><i class="fa-stack fa-xs logo-icon"><i class="fas fa-ban fa-stack-2x"></i><i class="fas fa-bug fa-stack-1x"></i></i></span><span class="header-title-text">FixIt</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="menu" id="menu-mobile"><div class="search-wrapper">
+          <div class="search mobile" id="search-mobile">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-mobile">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </div>
+          <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+            取消
+          </a>
+        </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/friends/" title="友情链接">友链</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/Lruihao/FixIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <i class="fas fa-adjust fa-fw"></i>
+      </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+          <select class="language-select" onchange="location = this.value;"><option value="/en/get-mac-address/">English</option><option value="/get-mac-address/" selected>简体中文</option></select>
+        </a></div>
+  </div>
+</header>
+<div class="search-dropdown desktop">
+  <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+  <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+        <div class="container"><div class="toc" id="toc-auto">
+      <h2 class="toc-title">目录</h2>
+      <div class="toc-content" id="toc-content-auto"></div>
+    </div><article class="page single"><h1 class="single-title animated flipInX">获取设备的MAC地址</h1><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a
+  href="https://sexdev.gitee.io/"
+  
+    title="Author"
+  
+  
+    
+    target="_blank"
+  
+  
+    rel="noopener noreffer author"
+  
+  
+  
+    class=" author"
+  
+  
+><i class="fas fa-user-circle fa-fw"></i>sexdev</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/"><i class="far fa-folder fa-fw"></i>网络运维</a></span></div>
+      <div class="post-meta-line"><span title=2022-02-03&#32;19:00:40>
+            <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-03" >2022-02-03</time>
+          </span>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 78 字&nbsp;
+        <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+    </div><div class="featured-image"><img
+    class="lazyload"
+    src="/svg/loading.min.svg"
+    data-src="/get-mac-address/featured-image.jpg"
+    data-srcset="/get-mac-address/featured-image.jpg, /get-mac-address/featured-image.jpg 1.5x, /get-mac-address/featured-image.jpg 2x"
+    data-sizes="auto"
+    alt="/get-mac-address/featured-image.jpg"
+    title="如何获取华为交换机每个端口所接设备的MAC地址" /></div><div class="details toc" id="toc-static" kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#获取mac地址">获取MAC地址</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>这篇文章提供了获取接入华为交换机的每个设备的MAC地址的方法。</p>
+<h2 id="获取mac地址">获取MAC地址</h2>
+<p>通过串口进入交换机命令行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#进入系统视图</span>
+system
+<span class="c1">#显示每个端口的mac地址</span>
+display mac address
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2022-02-03&#32;19:40:40>更新于 2022-02-03</span>
+      </div>
+      <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+    <div class="post-info-line">
+      <div class="post-info-md"><span>
+              <a class="link-to-markdown" href="/get-mac-address/index.md" target="_blank">阅读原始文档</a>
+            </span></div>
+      <div class="post-info-share">
+        <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://sexdev.github.io/get-mac-address/" data-title="获取设备的MAC地址" data-hashtags="网络运维"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://sexdev.github.io/get-mac-address/" data-hashtag="网络运维"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://sexdev.github.io/get-mac-address/" data-title="获取设备的MAC地址"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://sexdev.github.io/get-mac-address/" data-title="获取设备的MAC地址"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://sexdev.github.io/get-mac-address/" data-title="获取设备的MAC地址" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw"></i></a></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/">网络运维</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/theme-documentation-extended-shortcodes/" class="prev" rel="prev" title="主题文档 - 扩展 Shortcodes"><i class="fas fa-angle-left fa-fw"></i>主题文档 - 扩展 Shortcodes</a>
+      <a href="/sexdev-hugo-site/" class="next" rel="next" title="sexdev的hugo建站">sexdev的hugo建站<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+      </main><footer class="footer">
+    <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer" title="Hugo 0.92.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/Lruihao/FixIt" target="_blank" rel="external nofollow noopener noreffer" title="FixIt 0.2.12"><i class="fa-stack fa-xs logo-icon"><i class="fas fa-ban fa-stack-2x"></i><i class="fas fa-bug fa-stack-1x"></i></i> FixIt</a>
+        </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://sexdev.github.io" target="_blank">SexDev</a></span><span class="footer-divider"></span><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div><div class="footer-line">
+          <span id="busuanzi_container_site_uv" title=总访客数
+            ><i class="far fa-user"></i>
+            <span id="busuanzi_value_site_uv"
+              ><i class="fa fa-spinner fa-spin"></i
+            ></span
+          ></span><span class="site-time footer-divider" title=网站运行中&#32;...
+              ><i class="fas fa-heartbeat animate-icon"></i>
+              <span class="run-times">Loading...</span
+            ></span><span id="busuanzi_container_site_pv" class="footer-divider" title=总访问量
+            ><i class="far fa-eye"></i>
+            <span id="busuanzi_value_site_pv"
+              ><i class="fa fa-spinner fa-spin"></i
+            ></span
+          ></span>
+        </div></div>
+  </footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+        <i class="fas fa-arrow-up fa-fw"></i>
+      </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+        <i class="fas fa-comment fa-fw"></i>
+      </a>
+    </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js" defer></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js" defer></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js" async defer></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js" defer></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js" defer></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js" defer></script><script type="text/javascript" src="/lib/sharer/sharer.min.js" async defer></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script type="text/javascript" src="/lib/pangu/pangu.min.js" defer></script><script type="text/javascript" src="/lib/watermark/watermark.min.js"></script><script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async defer></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"algoliaAppID":"YKOM6PKLUY","algoliaIndex":"index.zh-cn","algoliaSearchKey":"a44c110d3ac360be2c69cd79d34b77a8","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js" defer></script><script type="text/javascript" src="/js/_custom.min.js" defer></script><script type="text/javascript">function createTime() {
+    let now = new Date();
+    let run = new Date("2019-02-03T19:30:34+08:00");
+    
+    let runTime = (now - run) / 1000,
+      days = Math.floor(runTime / 60 / 60 / 24),
+      hours = Math.floor(runTime / 60 / 60 - (24 * days)),
+      minutes = Math.floor(runTime / 60 - (24 * 60 * days) - (60 * hours)),
+      seconds = Math.floor((now - run) / 1000 - (24 * 60 * 60 * days) - (60 * 60 * hours) - (60 * minutes));
+    document.querySelector(".run-times").innerHTML = `${days},${String(hours).padStart(2,0)}:${String(minutes).padStart(2,0)}:${String(seconds).padStart(2,0)}`;
+  }
+
+(() => {if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.min.js', { scope: '/' })
+        .then(function (registration) {
+          
+        })
+        .catch(function (error) {
+          console.error('error: ', error);
+        });
+      navigator.serviceWorker.ready.then(function (registration) {
+        
+      });
+    }new Watermark({
+        content: "\u003ci class=\"fa-stack fa-xs logo-icon\"\u003e\u003ci class=\"fas fa-ban fa-stack-2x\"\u003e\u003c/i\u003e\u003ci class=\"fas fa-bug fa-stack-1x\"\u003e\u003c/i\u003e\u003c/i\u003e FixIt 主题" || '<i class="fa-stack fa-xs logo-icon"><i class="fas fa-bug fa-stack-1x"></i><i class="fas fa-ban fa-stack-2x"></i></i> FixIt Theme',
+        appendTo:  null  || '.wrapper>.main',
+        opacity:  0.02 ,
+        width:  null ,
+        height:  23 ,
+        rowSpacing:  null ,
+        colSpacing:  null ,
+        rotate:  null ,
+        fontSize:  null 
+      });var siteTime = setInterval("createTime()", 500);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        return clearInterval(siteTime);
+      }
+      var siteTime = setInterval("createTime()", 500);
+    });document.addEventListener('DOMContentLoaded', () => {
+    
+    pangu.autoSpacingPage();
+  });
+
+})();
+</script>
+</body>
+</html>
