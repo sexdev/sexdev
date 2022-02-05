@@ -4,7 +4,7 @@
     <link>https://sexdev.github.io/</link>
     <description>关于 FixIt 主题</description>
     <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>playingdragon@hotmail.com (SexDev)</managingEditor>
-      <webMaster>playingdragon@hotmail.com (SexDev)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 09:30:40 &#43;0800</lastBuildDate>
+      <webMaster>playingdragon@hotmail.com (SexDev)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 05 Feb 2022 17:43:40 &#43;0800</lastBuildDate>
       <atom:link href="https://sexdev.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>主题文档 - 基本概念</title>
@@ -27,6 +27,13 @@
   <author>Lruihao</author>
   <guid>https://sexdev.github.io/theme-documentation-built-in-shortcodes/</guid>
   <description><![CDATA[<p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁。</p>]]></description>
+</item><item>
+  <title>使用短命令进入相关设置</title>
+  <link>https://sexdev.github.io/short-commands/</link>
+  <pubDate>Sat, 05 Feb 2022 17:43:40 &#43;0800</pubDate>
+  <author>sexdev</author>
+  <guid>https://sexdev.github.io/short-commands/</guid>
+  <description><![CDATA[<p>这篇文章提供了几个短命令，在网络运维和系统运维过程中可以通过运行窗口输入几个命令进入相关设置。</p>]]></description>
 </item><item>
   <title>sexdev的hugo建站</title>
   <link>https://sexdev.github.io/sexdev-hugo-site/</link>
