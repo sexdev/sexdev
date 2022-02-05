@@ -4,7 +4,7 @@
     <link>https://sexdev.github.io/</link>
     <description>关于 FixIt 主题</description>
     <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>playingdragon@hotmail.com (SexDev)</managingEditor>
-      <webMaster>playingdragon@hotmail.com (SexDev)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 21:00:40 &#43;0800</lastBuildDate>
+      <webMaster>playingdragon@hotmail.com (SexDev)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 09:30:40 &#43;0800</lastBuildDate>
       <atom:link href="https://sexdev.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>主题文档 - 基本概念</title>
@@ -30,14 +30,14 @@
 </item><item>
   <title>sexdev的hugo建站</title>
   <link>https://sexdev.github.io/sexdev-hugo-site/</link>
-  <pubDate>Thu, 03 Feb 2022 21:00:40 &#43;0800</pubDate>
+  <pubDate>Thu, 03 Feb 2022 09:30:40 &#43;0800</pubDate>
   <author>sexdev</author>
   <guid>https://sexdev.github.io/sexdev-hugo-site/</guid>
   <description><![CDATA[<p>这篇文章是我通过hugo建站的过程。</p>]]></description>
 </item><item>
   <title>获取设备的MAC地址</title>
   <link>https://sexdev.github.io/get-mac-address/</link>
-  <pubDate>Thu, 03 Feb 2022 19:00:40 &#43;0800</pubDate>
+  <pubDate>Thu, 03 Feb 2022 08:30:40 &#43;0800</pubDate>
   <author>sexdev</author>
   <guid>https://sexdev.github.io/get-mac-address/</guid>
   <description><![CDATA[<p>这篇文章提供了获取接入华为交换机的每个设备的MAC地址的方法。</p>]]></description>

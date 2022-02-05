@@ -29,7 +29,7 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/theme-documentation-built-in-shortcodes/"
           /></url><url>
-      <loc>https://sexdev.github.io/sexdev-hugo-site/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/sexdev-hugo-site/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/sexdev-hugo-site/"
@@ -38,7 +38,7 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/sexdev-hugo-site/"
           /></url><url>
-      <loc>https://sexdev.github.io/get-mac-address/</loc><lastmod>2022-02-03T19:40:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/get-mac-address/</loc><lastmod>2022-02-05T15:32:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/get-mac-address/"
@@ -83,7 +83,7 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/pwa-support/"
           /></url><url>
-      <loc>https://sexdev.github.io/categories/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/categories/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/categories/"
@@ -92,26 +92,9 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/categories/"
           /></url><url>
-      <loc>https://sexdev.github.io/tags/html/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-            rel="alternate"
-            hreflang="en"
-            href="https://sexdev.github.io/en/tags/html/"
-            /><xhtml:link
-          rel="alternate"
-          hreflang="zh-cn"
-          href="https://sexdev.github.io/tags/html/"
-          /></url><url>
-      <loc>https://sexdev.github.io/categories/hugo%E5%BB%BA%E7%AB%99/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://sexdev.github.io/tags/markdown/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-            rel="alternate"
-            hreflang="en"
-            href="https://sexdev.github.io/en/tags/markdown/"
-            /><xhtml:link
-          rel="alternate"
-          hreflang="zh-cn"
-          href="https://sexdev.github.io/tags/markdown/"
-          /></url><url>
-      <loc>https://sexdev.github.io/posts/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/tags/hugo/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://sexdev.github.io/categories/hugo%E5%BB%BA%E7%AB%99/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://sexdev.github.io/posts/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/posts/"
@@ -120,7 +103,7 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/posts/"
           /></url><url>
-      <loc>https://sexdev.github.io/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/"
@@ -129,7 +112,7 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/"
           /></url><url>
-      <loc>https://sexdev.github.io/tags/</loc><lastmod>2022-02-03T21:50:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+      <loc>https://sexdev.github.io/tags/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
             rel="alternate"
             hreflang="en"
             href="https://sexdev.github.io/en/tags/"
@@ -138,8 +121,9 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/tags/"
           /></url><url>
-      <loc>https://sexdev.github.io/tags/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/</loc><lastmod>2022-02-03T19:40:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-      <loc>https://sexdev.github.io/categories/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/</loc><lastmod>2022-02-03T19:40:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://sexdev.github.io/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</loc><lastmod>2022-02-05T15:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://sexdev.github.io/tags/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/</loc><lastmod>2022-02-05T15:32:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+      <loc>https://sexdev.github.io/categories/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/</loc><lastmod>2022-02-05T15:32:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
       <loc>https://sexdev.github.io/tags/pwa/</loc><lastmod>2022-01-27T18:39:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
             rel="alternate"
             hreflang="en"
@@ -149,6 +133,15 @@
           hreflang="zh-cn"
           href="https://sexdev.github.io/tags/pwa/"
           /></url><url>
+      <loc>https://sexdev.github.io/tags/markdown/</loc><lastmod>2022-01-26T15:15:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://sexdev.github.io/en/tags/markdown/"
+            /><xhtml:link
+          rel="alternate"
+          hreflang="zh-cn"
+          href="https://sexdev.github.io/tags/markdown/"
+          /></url><url>
       <loc>https://sexdev.github.io/tags/shortcodes/</loc><lastmod>2022-01-28T22:21:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
             rel="alternate"
             hreflang="en"
@@ -157,6 +150,15 @@
           rel="alternate"
           hreflang="zh-cn"
           href="https://sexdev.github.io/tags/shortcodes/"
+          /></url><url>
+      <loc>https://sexdev.github.io/tags/html/</loc><lastmod>2022-01-20T18:01:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority><xhtml:link
+            rel="alternate"
+            hreflang="en"
+            href="https://sexdev.github.io/en/tags/html/"
+            /><xhtml:link
+          rel="alternate"
+          hreflang="zh-cn"
+          href="https://sexdev.github.io/tags/html/"
           /></url><url>
       <loc>https://sexdev.github.io/categories/markdown/</loc><lastmod>2022-01-26T09:34:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority><xhtml:link
             rel="alternate"
