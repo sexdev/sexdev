@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>所有文章 - FixIt</title>
+    <title>所有文章 - SexDev</title>
     <link>https://sexdev.github.io/posts/</link>
-    <description>所有文章 | FixIt</description>
+    <description>所有文章 | SexDev</description>
     <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>playingdragon@hotmail.com (SexDev)</managingEditor>
       <webMaster>playingdragon@hotmail.com (SexDev)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Feb 2022 21:00:40 &#43;0800</lastBuildDate><atom:link href="https://sexdev.github.io/posts/" rel="self" type="application/rss+xml" /><item>
   <title>主题文档 - 基本概念</title>
